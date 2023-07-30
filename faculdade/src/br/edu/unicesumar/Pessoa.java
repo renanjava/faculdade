@@ -1,12 +1,10 @@
 package br.edu.unicesumar;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.temporal.ChronoUnit;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Pessoa {
-	private String nome = "Não informado";
+	private String nome;
 	private Date dataNasc;
 	private int idade;
 	
