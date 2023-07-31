@@ -8,16 +8,16 @@ public class Pessoa {
 	private Date dataNasc;
 	private int idade;
 	
-	public Pessoa(String nome, int idade){ //construtor que seta apenas o nome e a idade
+	public Pessoa(String nome, int idade){ //construtor 01
 		this.nome = nome;
 		this.idade = idade;
 	}
 	
-	public Pessoa(Date dataNasc) { //construtor que seta a data de nascimento
+	public Pessoa(Date dataNasc) { //construtor 02
 		this.dataNasc = dataNasc;		
 	}
 	
-	public Pessoa(){ //construtor default do java sobrescrito 
+	public Pessoa(){ //construtor 03
 		
 	}
 

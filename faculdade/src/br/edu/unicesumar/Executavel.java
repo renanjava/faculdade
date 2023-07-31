@@ -2,7 +2,9 @@ package br.edu.unicesumar;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Executavel {
 	public static void main(String[] args) throws ParseException {
@@ -12,24 +14,18 @@ public class Executavel {
 		Pessoa renan2 = new Pessoa(formatada.parse("05/04/2004")); //construtor02
 		Pessoa renan3 = new Pessoa(); //construtor03
 		
+		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		pessoas.add(renan1);
+		pessoas.add(renan2);
+		pessoas.add(renan3);
 		
-		System.out.println("Construtor 01\n" 
-		+ "Nome: " +renan1.getNome()
-		+ " Idade: " +renan1.getIdade()
-		+ " Nascimento: " +dadosInseridos(formatada.format(renan1.getDataNasc())));
-		
-		System.out.println("Construtor 02\n" 
-		+ "Nome: " +renan2.getNome()							 
-		+ " Idade: " +renan2.getIdade()						 
-		+ " Nascimento: " +formatada.format(renan2.getDataNasc()));
-		
-		System.out.println("Construtor 03\n" 
-		+ "Nome: " +renan3.getNome()							 
-		+ " Idade: " +renan3.getIdade()							 
-		+ " Nascimento: " +renan3.getDataNasc());
-	}
-	
-	public static boolean dadosInseridos(String dadosUsuario) {
-		return (dadosUsuario == "0" || dadosUsuario == null);
+		for (Pessoa p : pessoas) {
+			System.out.println("Construtor 01\n" 
+				+ "Nome: " +(p.getNome() == null ? "Não informado" : p.getNome())
+				+ "\nIdade: " +(p.getIdade() == 0 ? "Não informado" : p.getIdade())
+				+ "\nNascimento: " +(p.getDataNasc() == null ? 
+					"Não informado" : formatada.format(p.getDataNasc()))
+					+"\n");
+		}
 	}
 }
