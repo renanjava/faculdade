@@ -20,7 +20,7 @@ public class Executavel {
 		pessoas.add(renan3);
 		
 		for (Pessoa p : pessoas) {
-			System.out.println("Construtor 01\n" 
+			System.out.println("Construtor 0"+(pessoas.indexOf(p)+1)+"\n" 
 				+ "Nome: " +(p.getNome() == null ? "Não informado" : p.getNome())
 				+ "\nIdade: " +(p.getIdade() == 0 ? "Não informado" : p.getIdade())
 				+ "\nNascimento: " +(p.getDataNasc() == null ? 
